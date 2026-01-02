@@ -36,6 +36,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   
+            <!-- Material Web Components (Material 3) CDN 
+            <script type="module" src="https://unpkg.com/@material/web/all.js?module"></script>
+            <link rel="stylesheet" href="https://unpkg.com/@material/web@latest/typography/md-typescale.css">
+           // Optionally add Material Icons 
+            <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">-->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEF2CL2NKM"></script>
   <script>
@@ -124,7 +129,12 @@
 
             <ul class="list-unstyled">
 	      <li>
-		<p><a class="text-white" href="{{ site.data.address.google_maps_link }}" target="_blank"><i class="fas fa-map-marker-alt pe-2"></i>{{ site.data.address.address }}</a></p>
+		<p><a class="text-white" href="{{ site.data.address.google_maps_link }}" target="_blank">
+                  <i class="fas fa-map-marker-alt pe-2"></i>
+                  {{ site.data.address.addressL1 }}<br/>
+                  {{ site.data.address.addressL2 }}<br/>
+                  {{ site.data.address.addressL3 }}<br/>
+            </a></p>
 	      </li>
 	      <li>
 		<p><i class="fas fa-phone pe-2"></i>{{ site.data.address.phone_number }}</p>

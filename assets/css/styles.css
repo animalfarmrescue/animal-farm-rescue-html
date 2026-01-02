@@ -10897,6 +10897,7 @@ p {
 
 .section-heading {
   text-transform: uppercase;
+  font-size: 20pt;
 }
 .section-heading .section-heading-upper {
   display: block;
@@ -11012,6 +11013,7 @@ p {
 }
 
 img.qr_code {
+  width: -webkit-fill-available;
   display: block;
   margin: 0 auto;
   height: auto;
@@ -11027,7 +11029,7 @@ img.qr_code {
     height: auto;
   }
   img.qr_code {
-    width: 20%;
+    width: 30%;
     height: auto;
   }
 
