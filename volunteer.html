@@ -26,28 +26,19 @@ permalink: /volunteer
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="volunteer-form">
-                    <form>
-                        <div class="control-group">
-                            <input type="text" class="form-control" placeholder="Name" required="required" />
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" placeholder="Email" required="required" />
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" placeholder="Why you want to become a volunteer?"
-                                required="required"></textarea>
-                        </div>
-                        <div>
-                            <button class="btn btn-custom" type="submit">Become a volunteer</button>
-                        </div>
-                    </form>
+                     <!--open google form on click -->
+                    <div>
+                        <button class="btn btn-custom"
+                            onclick="window.open('{{ site.data.commonlinks.volunteerForm }}')" type="submit">Become a
+                            Volunteer</button>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-7">
                 <div class="volunteer-content">
                     <div class="section-header">
                         <p>Become A Volunteer</p>
-                        <h2>Let’s make a difference in the lives of others</h2>
+                        <h2>Let’s make a difference !</h2>
                     </div>
                     <div class="volunteer-text">
                         <p>
@@ -61,39 +52,6 @@ permalink: /volunteer
     </div>
 </div>
 <!-- Volunteer End -->
-<!-- Page Header Start -->
-<div class="page-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>Volunteer</h2>
-            </div>
-            <div class="col-12">
-                <a href="{{ '/' | relative_url }}">Home</a>
-                <a href="#">Volunteer</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Page Header End -->
-
-
-<!-- Page Header Start -->
-<div class="page-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>Volunteer</h2>
-            </div>
-            <div class="col-12">
-                <a href="">Home</a>
-                <a href="">Volunteer</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Page Header End -->
-
 
 <!-- Volunteer Start -->
 <div class="container">
@@ -116,12 +74,12 @@ permalink: /volunteer
                             <button class="btn btn-custom" type="submit">Become a volunteer</button>
                         </div>
                     </form>-->
-                    <!--open google form on click -->
+                    <!--open google form on click --
                     <div>
                         <button class="btn btn-custom"
                             onclick="window.open('{{ site.data.commonlinks.volunteerForm }}')" type="submit">Become a
                             Volunteer</button>
-                    </div>
+                    </div>-->
                     <div style="padding:5px">
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-warning"> Our Challenges</li>
