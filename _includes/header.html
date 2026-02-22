@@ -39,6 +39,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
                 <a href="{{ '/' | relative_url }}" class="nav-item nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+                <a href="{{ '/about' | relative_url }}" class="nav-item nav-link{% if page.url contains '/about' %} active{% endif %}">About Us</a>
                 <a href="{{ '/activities' | relative_url }}" class="nav-item nav-link{% if page.url contains '/activities' %} active{% endif %}">Activities</a>
                 <a href="{{ '/donate' | relative_url }}" class="nav-item nav-link{% if page.url contains '/donate' %} active{% endif %}">Donate</a>
                 <a href="{{ '/adopt' | relative_url }}" class="nav-item nav-link{% if page.url contains '/adopt' %} active{% endif %}">Adopt</a>
