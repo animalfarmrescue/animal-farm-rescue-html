@@ -848,7 +848,10 @@ a:focus {
     }
 }
 
-
+.bgimage {
+    background-blend-mode: overlay;
+    background-size: cover;
+}
 /*******************************/
 /********** About CSS **********/
 /*******************************/
@@ -981,7 +984,9 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
+    background-blend-mode: overlay;
     background: rgba(0, 0, 0, .5);
+    
 }
 
 .donate .donate-content {
@@ -2341,3 +2346,7 @@ a:focus {
         text-align: center;
     }
 }
+
+.aboutContent{
+    align-self: baseline;
+  }
