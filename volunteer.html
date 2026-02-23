@@ -4,68 +4,151 @@ title: Volunteer
 permalink: /volunteer
 ---
 
-<section class="page-section about-heading">
-  <div class="container">
-    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0 w-50max about_image" src="assets/images/volunteering.jpeg" alt="..." />
-    <div class="about-heading-content">
-      <div class="row">
-        <div class="col-xl-9 col-lg-10 mx-auto">
-          <div class="bg-faded rounded p-5">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">It's not always about money</span>
-              <span class="section-heading-lower">Volunteer Your Time and Skills </span>
-	    </h2>
-	    <ul class="list-unstyled text-start">
-	      {% for item in site.data.volunteer %}
-	      <li class="mb-2">
-		<i class="fas fa-paw pe-3"></i><span class="fw-bold">{{ item.title }}:</span> {{ item.description }}
-	      </li>
-	      {% endfor %}
- 	    </ul>
-          </div>
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Volunteer</h2>
+            </div>
+            <div class="col-12">
+                <a href="index.html">Home</a>
+                <a href="volunteer.html">Volunteer</a>
+            </div>
         </div>
-      </div>
+    </div>
+</div>
+<!-- Page Header End -->
 
-      <div class="row mt-3">
-        <div class="col-xl-9 col-lg-10 mx-auto">
-          <div class="bg-faded rounded p-5">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Our needs</span>
-              <span class="section-heading-lower">Challenges</span>
-	    </h2>
-	    <ul class="list-unstyled text-start">
-	      {% for item in site.data.challenges %}
-	      <li class="mb-2">
-		<i class="fas fa-paw pe-3"></i>{{ item.title }}
-	      </li>
-	      {% endfor %}
- 	    </ul>
-          </div>
+<!-- Volunteer Start -->
+<div class="container">
+    <div class="volunteer" data-parallax="scroll">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="volunteer-form">
+                     <!--open google form on click -->
+                    <div>
+                        <button class="btn btn-custom"
+                            onclick="window.open('{{ site.data.commonlinks.volunteerForm }}')" type="submit">
+                            <i class="fas fa-hand-point-right pe-3" style="color:white"></i>&nbsp;Become a
+                            Volunteer</button>
+                    </div>
+                    <div>
+                        
+                        <button class="btn btn-custom"
+                            onclick="window.open('/img/Ways_to_volunteer.jpeg')" target="_blank">
+                            <i class="fas fa-hand-point-right pe-3" style="color:white"></i>&nbsp;View Ways to Volunteer</button>
+                    </div>
+                    <div>
+                        
+                        <button class="btn btn-custom"
+                            onclick="window.open('/docs/volunteer_day_plan.pdf')" target="_blank">
+                            <i class="fas fa-hand-point-right pe-3" style="color:white"></i>&nbsp;Volunteer Day Plan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="volunteer-content">
+                    <div class="section-header">
+                        <p>Become A Volunteer</p>
+                        <h2>Let’s make a difference !</h2>
+                    </div>
+                    <div class="volunteer-text">
+                        <p>
+                            Join our team and help us care for animals in need. Whether you can foster, help at events,
+                            or support our daily work, your time makes a difference!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+<!-- Volunteer End -->
+
+<!-- Volunteer Start -->
+<div class="container">
+    <div class="volunteer" data-parallax="scroll"
+        data-image-src="{{ '/assets/images/volunteeringBW.jpeg' | relative_url }}">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="volunteer-form">
+                    <!-- <form>
+                        <div class="control-group">
+                            <input type="text" class="form-control" placeholder="Name" required="required" />
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" placeholder="Email" required="required" />
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-custom" type="submit">Become a volunteer</button>
+                        </div>
+                    </form>-->
+                    <!--open google form on click --
+                    <div>
+                        <button class="btn btn-custom"
+                            onclick="window.open('{{ site.data.commonlinks.volunteerForm }}')" type="submit">Become a
+                            Volunteer</button>
+                    </div>-->
+                    <div style="padding:5px">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-warning"> Our Challenges</li>
+                            {% for item in site.data.challenges %}
+                            <li class="list-group-item">{{item.title}}</li>
+                            {% endfor %}
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="volunteer-content">
+                    <div class="section-header">
+                        <p>Become A Volunteer</p>
+                        <h2>Volunteer Your Time and Skills</h2>
+                    </div>
+                    <div class="volunteer-text">
+                        <p>Let’s make a difference in the lives of others. It's not always about money, sometimes it's
+                            about making a difference.Choose from a variety of volunteer opportunities </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Voluteer Types start-->
+        <div class="causes" id="volunteerTypes">
+            <div class="container">
+                <!--<div class="section-header text-center">
+          <p>How can you help?</p>
+          <h2></h2>
+      </div>-->
+                {% include volunteerTypes.html %}
+            </div>
+        </div>
+    </div>
+</div>
+<!--Volunteer types end-->
+<div class="container">
+    <div class="row">
+        
+<div class="card">
+  <div class="row no-gutters">
+    <div class="col-md-5">
+     <img src="{{ '/assets/images/exterior.jpeg' | relative_url }}" class="card-img-top" alt="Image">
+    </div>
+    <div class="col-md-7">
+      <div class="card-body">
+        <h5 class="card-title">Celebrate Your Special Day At Our Center</h5>
+        <p class="card-text">Calling all animal lovers! 🐶🐱 Celebrate your special day or just unwind at the Animal Farm Rescue Centre, a cozy spot for those who truly love caring for stray dogs and cats. Stay for a day or a couple of nights in a comfortable bungalow with all your basic needs covered. Perfect for birthdays or any occasion! Just bring your own food, and enjoy your time surrounded by furry friends.</p>
+       
       </div>
-      
     </div>
   </div>
-</section>
-
-<section class="page-section mt-0 about-heading">
-  <div class="container">
-    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0 about_image" src="assets/images/exterior.jpeg" alt="..." />
-    <div class="about-heading-content">
-      <div class="row">
-        <div class="col-xl-9 col-lg-10 mx-auto">
-          <div class="bg-faded rounded p-5">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">At our center</span>
-              <span class="section-heading-lower">Celebrate your Special day</span>
-	    </h2>
-	    <p>
-	      Calling all animal lovers! 🐶🐱 Celebrate your special day or just unwind at the Animal Farm Rescue Centre, a cozy spot for those who truly love caring for stray dogs and cats. Stay for a day or a couple of nights in a comfortable bungalow with all your basic needs covered. Perfect for birthdays or any occasion! Just bring your own food, and enjoy your time surrounded by furry friends.
-	    </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+</div>
+</div>
+<!-- Volunteer End -->
