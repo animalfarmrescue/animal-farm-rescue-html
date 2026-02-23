@@ -11,8 +11,8 @@ permalink: /activities
         <h2>Our Activities</h2>
       </div>
       <div class="col-12">
-        <a href="index.html">Home</a>
-        <a href="activities.html">Activities</a>
+        <a href="#service">Services</a>
+        <a href="#otheractivities">Other Activities</a>
       </div>
     </div>
   </div>
@@ -22,10 +22,10 @@ permalink: /activities
  <!-- Activity Start -->
         <div class="causes">
              <div class="container">
-      <div class="section-header text-center">
+      <!--<div class="section-header text-center">
           <p></p>
           <h2>Our Activities</h2>
-      </div>
+      </div>-->
       <div class="row">
           {% for item in site.data.activities.activity %}
           <div class="col-lg-6 col-md-12 mb-4" onclick="window.open('{{site.data.commonlinks.volunteerForm}}')">
@@ -46,14 +46,14 @@ permalink: /activities
         <!-- Activity End -->
 
 <!-- Activities/Service Start -->
-         <div class="service">
+         <div class="service" id="service">
 
             {% include services.html %}
          </div>
 <!-- Activities/Service End -->
  
          <!-- Causes Start -->
-        <div class="causes">
+        <div class="causes" id="otheractivities">
               <div class="container">
       <div class="section-header text-center">
           <p>In Addition</p>
